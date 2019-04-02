@@ -5,6 +5,8 @@
  */
 package pkg6.atvdpooandre;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -19,7 +21,13 @@ public class Refrigerante {
         this.preco = p;
         this.qtdEstoque = q;
     }
-    public void efetuarVenda (){
-        this.qtdEstoque = this.qtdEstoque - 1;
+    public boolean efetuarVenda (double pagamento){
+        if(this.qtdEstoque>0){
+            this.qtdEstoque = this.qtdEstoque - 1;
+            JOptionPane.showMessageDialog(null, "Venda efetuada\n Troco: " + (pagamento-this.preco));
+            return true;
+        }
+        JOptionPane.showMessageDialog(null, "\nVenda não realizada");
+        return false;
     }
 }
