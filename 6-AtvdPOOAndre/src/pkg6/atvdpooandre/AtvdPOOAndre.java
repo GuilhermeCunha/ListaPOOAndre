@@ -24,6 +24,12 @@ public class AtvdPOOAndre {
         refrigerantes[2] = new Refrigerante("Fanta Laranja", 0.90, 8);
         refrigerantes[3] = new Refrigerante("Sprite", 0.80, 20);
         refrigerantes[4] = new Refrigerante("Kuat", 1.00, 100);
+        while(i<5){
+            System.out.println((i+1) + " " + refrigerantes[i].toString());
+            i++;
+        }
+        int n = Integer.parseInt(JOptionPane.showInputDialog("Qual refrigerante gostaria de comprar?"));
+        refrigerantes[(n-1)].efetuarVenda(Double.parseDouble(JOptionPane.showInputDialog("Com quantos reais gostaria de pagar?")));
         
     }
     

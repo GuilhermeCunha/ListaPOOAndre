@@ -27,7 +27,14 @@ public class Refrigerante {
             JOptionPane.showMessageDialog(null, "Venda efetuada\n Troco: " + (pagamento-this.preco));
             return true;
         }
-        JOptionPane.showMessageDialog(null, "\nVenda não realizada");
+        JOptionPane.showMessageDialog(null, "\nVenda nÃ£o realizada");
         return false;
     }
+
+    @Override
+    public String toString() {
+        return this.nome;
+    }
+    
+    
 }
